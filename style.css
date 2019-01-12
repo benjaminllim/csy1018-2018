@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+
+[class*="col-"] {
+  float: left;
+  padding: 20px; /* Controls the inside of the object*/
+}
+
+/* Structure */
+body {
+  display: flex;
+  flex-direction: column; /* https://www.w3schools.com/css/css3_flexbox.asp */
+  min-height: 100vh;
+  margin: 0; /* Controls the outside of the object*/
+  text-align:center;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Logo */
+.logo {
+  font-size: 5em;
+  text-align: center;
+  font-family: 'Niramit', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.hovergroup .hovergrouptext {
+  visibility: hidden; /*hidden when not hovered over */
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 2px 0;
+
+  /* Position the hover logo text */
+  position: relative; /*So when hovered the text is right under the logo in a straight line */
+  z-index: 1;
+}
+
+.hovergroup:hover .hovergrouptext {
+  visibility: visible;
+}
+/* For the nav bar */
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.nav li {float: left;}
+
+ul.nav li a { 
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+
+ul.nav li a:hover:not(.active) {background-color: #111;} 
+
+ul.nav li a.active {background-color: #4CAF50;} /* The current page nav button is coloured */
+
+@media screen and (max-width: 768px) {
+  ul.nav li.right, 
+  ul.nav li {float: none;} /* makes the nav bar to be one column*/
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  text-align: justify;  /*makes text space out each other*/ 
+  text-justify:	inter-word;   
+  color: #111;
+}
+
+h1 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 60px;
+  text-align: center;
+  color: #111;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: #111;
+}
+
+h3 {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  color: #111;
+}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */ /*https://www.w3schools.com/css/css_rwd_intro.asp */
+  .col-s-1 {width: 8.33%;} /* Sets each column to be certain % of webpage*/
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+.news {
+  background: #fff;
+  border-radius: 20px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.footer {  /*header and footer in the body tag */
+  width: 100%;
+  text-align: center;
+  background-color: #8d3499;
+}
+
+.icon {  /*https://www.w3schools.com/howto/howto_css_icon_buttons.asp*/
+  background-color: blue;
+  border: 0; /*Don't want any borders*/
+  border-radius: 5px; /*Make the icons have cut corners*/
+  color: white;
+  padding: 5px 5px; /*Icons width and height the same*/
+  font-size: 16px;
+  cursor: pointer; /*Cursor changes when hovered over icon*/
+background-image: url("https://www.facebook.com");
+}
+
+.icon2 {
+  background-color: lightblue;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.icon3 {
+  background-color: red;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
